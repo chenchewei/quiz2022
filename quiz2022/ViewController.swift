@@ -6,14 +6,28 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var button_search: UIButton!
+    @IBOutlet weak var button_history: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        componentsInit()
     }
 
+    private func componentsInit() {
+        title = "景點搜尋"
+        button_search.layer.cornerRadius = 5
+        button_history.layer.cornerRadius = 5
 
+    }
+    
+    
+    
 }
 

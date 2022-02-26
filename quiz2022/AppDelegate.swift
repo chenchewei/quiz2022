@@ -13,7 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // naviagtion bar 加入下方陰影
+        if #available(iOS 15, *) {
+            let appearance = UINavigationBarAppearance()
+            let navigationBar = UINavigationBar()
+            appearance.configureWithOpaqueBackground()
+            appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.2745098039, green: 0.5568627451, blue: 0.9019607843, alpha: 1)]
+            appearance.backgroundColor = #colorLiteral(red: 0.968627451, green: 0.968627451, blue: 0.968627451, alpha: 1)
+            appearance.shadowColor = .lightGray
+            navigationBar.standardAppearance = appearance;
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        }
         return true
     }
 
