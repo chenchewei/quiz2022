@@ -20,6 +20,16 @@
 		05D0489927CBA1F300FC22F5 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D0489827CBA1F300FC22F5 /* NotificationVC.swift */; };
 		05D0489C27CBA2D200FC22F5 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D0489B27CBA2D200FC22F5 /* APIManager.swift */; };
 		05D0489E27CBA37D00FC22F5 /* LandscapeRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D0489D27CBA37D00FC22F5 /* LandscapeRes.swift */; };
+		05D048A227CBB69200FC22F5 /* SearchHistoryDialogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D048A027CBB69200FC22F5 /* SearchHistoryDialogVC.swift */; };
+		05D048A327CBB69200FC22F5 /* SearchHistoryDialogVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D048A127CBB69200FC22F5 /* SearchHistoryDialogVC.xib */; };
+		05D048A627CBB6C100FC22F5 /* SearchResultDialogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D048A427CBB6C100FC22F5 /* SearchResultDialogVC.swift */; };
+		05D048A727CBB6C100FC22F5 /* SearchResultDialogVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D048A527CBB6C100FC22F5 /* SearchResultDialogVC.xib */; };
+		05D048AA27CBB71B00FC22F5 /* ActionDialogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D048A827CBB71B00FC22F5 /* ActionDialogVC.swift */; };
+		05D048AB27CBB71B00FC22F5 /* ActionDialogVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D048A927CBB71B00FC22F5 /* ActionDialogVC.xib */; };
+		05D048AF27CBBD0B00FC22F5 /* ActionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D048AD27CBBD0B00FC22F5 /* ActionCollectionViewCell.swift */; };
+		05D048B027CBBD0B00FC22F5 /* ActionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D048AE27CBBD0B00FC22F5 /* ActionCollectionViewCell.xib */; };
+		05D048B427CBD27900FC22F5 /* AnnotationDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D048B227CBD27900FC22F5 /* AnnotationDetailVC.swift */; };
+		05D048B527CBD27900FC22F5 /* AnnotationDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D048B327CBD27900FC22F5 /* AnnotationDetailVC.xib */; };
 		33B02586546FFA88F12BF825 /* Pods_quiz2022Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB5023F9EA2BDBDBD5A5BDC /* Pods_quiz2022Tests.framework */; };
 		973B85CAB0DC5E51143FA41C /* Pods_quiz2022_quiz2022UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33134521BEB28ACF76D8C14E /* Pods_quiz2022_quiz2022UITests.framework */; };
 		E009FAF82606676CA56C019A /* Pods_quiz2022.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D32C68D5B5BE0B0BD66261 /* Pods_quiz2022.framework */; };
@@ -60,6 +70,16 @@
 		05D0489827CBA1F300FC22F5 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
 		05D0489B27CBA2D200FC22F5 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		05D0489D27CBA37D00FC22F5 /* LandscapeRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeRes.swift; sourceTree = "<group>"; };
+		05D048A027CBB69200FC22F5 /* SearchHistoryDialogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryDialogVC.swift; sourceTree = "<group>"; };
+		05D048A127CBB69200FC22F5 /* SearchHistoryDialogVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHistoryDialogVC.xib; sourceTree = "<group>"; };
+		05D048A427CBB6C100FC22F5 /* SearchResultDialogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultDialogVC.swift; sourceTree = "<group>"; };
+		05D048A527CBB6C100FC22F5 /* SearchResultDialogVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultDialogVC.xib; sourceTree = "<group>"; };
+		05D048A827CBB71B00FC22F5 /* ActionDialogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDialogVC.swift; sourceTree = "<group>"; };
+		05D048A927CBB71B00FC22F5 /* ActionDialogVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionDialogVC.xib; sourceTree = "<group>"; };
+		05D048AD27CBBD0B00FC22F5 /* ActionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCollectionViewCell.swift; sourceTree = "<group>"; };
+		05D048AE27CBBD0B00FC22F5 /* ActionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionCollectionViewCell.xib; sourceTree = "<group>"; };
+		05D048B227CBD27900FC22F5 /* AnnotationDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationDetailVC.swift; sourceTree = "<group>"; };
+		05D048B327CBD27900FC22F5 /* AnnotationDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnotationDetailVC.xib; sourceTree = "<group>"; };
 		16D32C68D5B5BE0B0BD66261 /* Pods_quiz2022.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quiz2022.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F2AA8F242420D5B42E93A2C /* Pods-quiz2022-quiz2022UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quiz2022-quiz2022UITests.release.xcconfig"; path = "Target Support Files/Pods-quiz2022-quiz2022UITests/Pods-quiz2022-quiz2022UITests.release.xcconfig"; sourceTree = "<group>"; };
 		33134521BEB28ACF76D8C14E /* Pods_quiz2022_quiz2022UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quiz2022_quiz2022UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,11 +144,13 @@
 		05D0486427CA14E700FC22F5 /* quiz2022 */ = {
 			isa = PBXGroup;
 			children = (
+				05D048B127CBD25D00FC22F5 /* VC */,
+				05D048AC27CBBCEF00FC22F5 /* cell */,
+				05D0489F27CBB66B00FC22F5 /* DialogVC */,
 				05D0489A27CBA2BD00FC22F5 /* APIManager */,
 				05D0489527CA230500FC22F5 /* Extension */,
 				05D0486527CA14E700FC22F5 /* AppDelegate.swift */,
 				05D0486727CA14E700FC22F5 /* SceneDelegate.swift */,
-				05D0486927CA14E700FC22F5 /* ViewController.swift */,
 				05D0486B27CA14E700FC22F5 /* Main.storyboard */,
 				05D0486E27CA14E800FC22F5 /* Assets.xcassets */,
 				05D0487027CA14E800FC22F5 /* LaunchScreen.storyboard */,
@@ -170,6 +192,38 @@
 				05D0489D27CBA37D00FC22F5 /* LandscapeRes.swift */,
 			);
 			path = APIManager;
+			sourceTree = "<group>";
+		};
+		05D0489F27CBB66B00FC22F5 /* DialogVC */ = {
+			isa = PBXGroup;
+			children = (
+				05D048A027CBB69200FC22F5 /* SearchHistoryDialogVC.swift */,
+				05D048A127CBB69200FC22F5 /* SearchHistoryDialogVC.xib */,
+				05D048A427CBB6C100FC22F5 /* SearchResultDialogVC.swift */,
+				05D048A527CBB6C100FC22F5 /* SearchResultDialogVC.xib */,
+				05D048A827CBB71B00FC22F5 /* ActionDialogVC.swift */,
+				05D048A927CBB71B00FC22F5 /* ActionDialogVC.xib */,
+			);
+			path = DialogVC;
+			sourceTree = "<group>";
+		};
+		05D048AC27CBBCEF00FC22F5 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				05D048AD27CBBD0B00FC22F5 /* ActionCollectionViewCell.swift */,
+				05D048AE27CBBD0B00FC22F5 /* ActionCollectionViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		05D048B127CBD25D00FC22F5 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				05D0486927CA14E700FC22F5 /* ViewController.swift */,
+				05D048B227CBD27900FC22F5 /* AnnotationDetailVC.swift */,
+				05D048B327CBD27900FC22F5 /* AnnotationDetailVC.xib */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 		D3FFAE96F56590FF1B48D305 /* Frameworks */ = {
@@ -304,9 +358,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05D048AB27CBB71B00FC22F5 /* ActionDialogVC.xib in Resources */,
+				05D048B027CBBD0B00FC22F5 /* ActionCollectionViewCell.xib in Resources */,
 				05D0487227CA14E800FC22F5 /* LaunchScreen.storyboard in Resources */,
 				05D0486F27CA14E800FC22F5 /* Assets.xcassets in Resources */,
 				05D0486D27CA14E700FC22F5 /* Main.storyboard in Resources */,
+				05D048A327CBB69200FC22F5 /* SearchHistoryDialogVC.xib in Resources */,
+				05D048B527CBD27900FC22F5 /* AnnotationDetailVC.xib in Resources */,
+				05D048A727CBB6C100FC22F5 /* SearchResultDialogVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,8 +498,13 @@
 				05D0489E27CBA37D00FC22F5 /* LandscapeRes.swift in Sources */,
 				05D0489927CBA1F300FC22F5 /* NotificationVC.swift in Sources */,
 				05D0486627CA14E700FC22F5 /* AppDelegate.swift in Sources */,
+				05D048A627CBB6C100FC22F5 /* SearchResultDialogVC.swift in Sources */,
+				05D048AA27CBB71B00FC22F5 /* ActionDialogVC.swift in Sources */,
 				05D0489727CA232C00FC22F5 /* UIViewController+.swift in Sources */,
 				05D0486827CA14E700FC22F5 /* SceneDelegate.swift in Sources */,
+				05D048A227CBB69200FC22F5 /* SearchHistoryDialogVC.swift in Sources */,
+				05D048B427CBD27900FC22F5 /* AnnotationDetailVC.swift in Sources */,
+				05D048AF27CBBD0B00FC22F5 /* ActionCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,6 +31,6 @@ class LandscapeRes: Codable {
         let vicinity: String
         let photo: String
         let landscape: [String]
-        let star: Double
+        let star: Int
     }
 }

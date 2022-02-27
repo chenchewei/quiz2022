@@ -86,7 +86,7 @@ class ViewController: NotificationVC {
     }
 }
 
-extension ViewController: MKMapViewDelegate, CLLocationManagerDelegate {
+extension ViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("error:: \(error.localizedDescription)")
@@ -101,4 +101,57 @@ extension ViewController: MKMapViewDelegate, CLLocationManagerDelegate {
             print("didUpdateLocations")
         }
     }
+}
+
+extension ViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard !(view.annotation?.isKind(of: MKUserLocation.self) ?? false) else { return }
+        guard let data = data?.content else { return }
+        let index: Int = data.firstIndex(where: { $0.name == view.annotation?.title ?? "" }) ?? 0
+        guard data.indices.contains(index) else { return }
+        showActionDialogVC(data: data[index])
+    }
+}
+
+extension ViewController: ActionDialogVCDelegate {
+    func dismissDialogWithoutAction() {
+        removePresented(animator: .fade) { [weak self] in
+            guard let self = self else { return }
+            self.mapView.deselectAnnotation(self.mapView.selectedAnnotations.first, animated: true)
+        }
+    }
+    
+    func showAnnotationDetail(data: LandscapeRes.Contents) {
+        mapView.deselectAnnotation(mapView.selectedAnnotations.first, animated: true)
+        removePresented(animator: .fade) { [weak self] in
+            guard let self = self else { return }
+            let VC = AnnotationDetailVC(data: data)
+            self.navigationController?.pushViewController(VC, animated: true)
+        }
+    }
+    
+    func navigateToMap(lat: CLLocationDegrees, lng: CLLocationDegrees) {
+        mapView.deselectAnnotation(mapView.selectedAnnotations.first, animated: true)
+        removePresented(animator: .fade) {
+            // 終點座標
+            let targetCoordinate = CLLocationCoordinate2DMake(lat, lng)
+            // 初始化 MKPlacemark
+            let targetPlacemark = MKPlacemark(coordinate: targetCoordinate)
+            // 透過 targetPlacemark 初始化一個 MKMapItem
+            let targetItem = MKMapItem(placemark: targetPlacemark)
+            // 使用當前使用者當前座標初始化 MKMapItem
+            let userMapItem = MKMapItem.forCurrentLocation()
+            // 建立導航路線的起點及終點 MKMapItem
+            let routes = [userMapItem,targetItem]
+            // 透過 launchOptions 選擇我們的導航模式，例如：開車、走路等等...
+            // 不切換執行緒會閃退
+            DispatchQueue.main.async {
+                MKMapItem.openMaps(with: routes, launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
+            }
+            
+        }
+        
+    }
+    
+    
 }
