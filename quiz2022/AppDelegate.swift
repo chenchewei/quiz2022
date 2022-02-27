@@ -21,9 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.2745098039, green: 0.5568627451, blue: 0.9019607843, alpha: 1)]
             appearance.backgroundColor = #colorLiteral(red: 0.968627451, green: 0.968627451, blue: 0.968627451, alpha: 1)
             appearance.shadowColor = .lightGray
-            navigationBar.standardAppearance = appearance;
+            navigationBar.standardAppearance = appearance
+            
             UINavigationBar.appearance().scrollEdgeAppearance = appearance
         }
+        
         return true
     }
 

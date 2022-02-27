@@ -17,6 +17,9 @@
 		05D0488727CA14E800FC22F5 /* quiz2022UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D0488627CA14E800FC22F5 /* quiz2022UITests.swift */; };
 		05D0488927CA14E800FC22F5 /* quiz2022UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D0488827CA14E800FC22F5 /* quiz2022UITestsLaunchTests.swift */; };
 		05D0489727CA232C00FC22F5 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D0489627CA232C00FC22F5 /* UIViewController+.swift */; };
+		05D0489927CBA1F300FC22F5 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D0489827CBA1F300FC22F5 /* NotificationVC.swift */; };
+		05D0489C27CBA2D200FC22F5 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D0489B27CBA2D200FC22F5 /* APIManager.swift */; };
+		05D0489E27CBA37D00FC22F5 /* LandscapeRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D0489D27CBA37D00FC22F5 /* LandscapeRes.swift */; };
 		33B02586546FFA88F12BF825 /* Pods_quiz2022Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB5023F9EA2BDBDBD5A5BDC /* Pods_quiz2022Tests.framework */; };
 		973B85CAB0DC5E51143FA41C /* Pods_quiz2022_quiz2022UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33134521BEB28ACF76D8C14E /* Pods_quiz2022_quiz2022UITests.framework */; };
 		E009FAF82606676CA56C019A /* Pods_quiz2022.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D32C68D5B5BE0B0BD66261 /* Pods_quiz2022.framework */; };
@@ -54,6 +57,9 @@
 		05D0488627CA14E800FC22F5 /* quiz2022UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quiz2022UITests.swift; sourceTree = "<group>"; };
 		05D0488827CA14E800FC22F5 /* quiz2022UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quiz2022UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		05D0489627CA232C00FC22F5 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		05D0489827CBA1F300FC22F5 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
+		05D0489B27CBA2D200FC22F5 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		05D0489D27CBA37D00FC22F5 /* LandscapeRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeRes.swift; sourceTree = "<group>"; };
 		16D32C68D5B5BE0B0BD66261 /* Pods_quiz2022.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quiz2022.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F2AA8F242420D5B42E93A2C /* Pods-quiz2022-quiz2022UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quiz2022-quiz2022UITests.release.xcconfig"; path = "Target Support Files/Pods-quiz2022-quiz2022UITests/Pods-quiz2022-quiz2022UITests.release.xcconfig"; sourceTree = "<group>"; };
 		33134521BEB28ACF76D8C14E /* Pods_quiz2022_quiz2022UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quiz2022_quiz2022UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +124,7 @@
 		05D0486427CA14E700FC22F5 /* quiz2022 */ = {
 			isa = PBXGroup;
 			children = (
+				05D0489A27CBA2BD00FC22F5 /* APIManager */,
 				05D0489527CA230500FC22F5 /* Extension */,
 				05D0486527CA14E700FC22F5 /* AppDelegate.swift */,
 				05D0486727CA14E700FC22F5 /* SceneDelegate.swift */,
@@ -126,6 +133,7 @@
 				05D0486E27CA14E800FC22F5 /* Assets.xcassets */,
 				05D0487027CA14E800FC22F5 /* LaunchScreen.storyboard */,
 				05D0487327CA14E800FC22F5 /* Info.plist */,
+				05D0489827CBA1F300FC22F5 /* NotificationVC.swift */,
 			);
 			path = quiz2022;
 			sourceTree = "<group>";
@@ -155,6 +163,15 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		05D0489A27CBA2BD00FC22F5 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				05D0489B27CBA2D200FC22F5 /* APIManager.swift */,
+				05D0489D27CBA37D00FC22F5 /* LandscapeRes.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
 		D3FFAE96F56590FF1B48D305 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,7 +192,6 @@
 				4DCD2768083C7172521A999F /* Pods-quiz2022Tests.debug.xcconfig */,
 				5D2BB69E6A28FD2559A7B2D4 /* Pods-quiz2022Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -418,7 +434,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05D0489C27CBA2D200FC22F5 /* APIManager.swift in Sources */,
 				05D0486A27CA14E700FC22F5 /* ViewController.swift in Sources */,
+				05D0489E27CBA37D00FC22F5 /* LandscapeRes.swift in Sources */,
+				05D0489927CBA1F300FC22F5 /* NotificationVC.swift in Sources */,
 				05D0486627CA14E700FC22F5 /* AppDelegate.swift in Sources */,
 				05D0489727CA232C00FC22F5 /* UIViewController+.swift in Sources */,
 				05D0486827CA14E700FC22F5 /* SceneDelegate.swift in Sources */,
@@ -601,9 +620,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 36B5FN7KNK;
+				DEVELOPMENT_TEAM = ACX3M6X8Z7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = quiz2022/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Please allow me to access your location";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Please allow me to access your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow me to access your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -631,9 +653,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 36B5FN7KNK;
+				DEVELOPMENT_TEAM = ACX3M6X8Z7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = quiz2022/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Please allow me to access your location";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Please allow me to access your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow me to access your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
