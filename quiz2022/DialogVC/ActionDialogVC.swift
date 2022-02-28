@@ -50,6 +50,9 @@ class ActionDialogVC: UIViewController {
         collectionView_flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         collectionView.reloadData()
         label_title.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissDialog)))
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(dismissDialog))
+        swipeDown.direction = .down
+        view.addGestureRecognizer(swipeDown)
     }
     
     @objc private func dismissDialog() {

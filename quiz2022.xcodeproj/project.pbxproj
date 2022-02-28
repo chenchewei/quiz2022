@@ -30,6 +30,8 @@
 		05D048B027CBBD0B00FC22F5 /* ActionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D048AE27CBBD0B00FC22F5 /* ActionCollectionViewCell.xib */; };
 		05D048B427CBD27900FC22F5 /* AnnotationDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D048B227CBD27900FC22F5 /* AnnotationDetailVC.swift */; };
 		05D048B527CBD27900FC22F5 /* AnnotationDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D048B327CBD27900FC22F5 /* AnnotationDetailVC.xib */; };
+		05D048BA27CC966700FC22F5 /* PhotoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D048B827CC966700FC22F5 /* PhotoDetailVC.swift */; };
+		05D048BD27CCA2AA00FC22F5 /* PhotoDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D048BC27CCA2AA00FC22F5 /* PhotoDetailVC.xib */; };
 		33B02586546FFA88F12BF825 /* Pods_quiz2022Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB5023F9EA2BDBDBD5A5BDC /* Pods_quiz2022Tests.framework */; };
 		973B85CAB0DC5E51143FA41C /* Pods_quiz2022_quiz2022UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33134521BEB28ACF76D8C14E /* Pods_quiz2022_quiz2022UITests.framework */; };
 		E009FAF82606676CA56C019A /* Pods_quiz2022.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D32C68D5B5BE0B0BD66261 /* Pods_quiz2022.framework */; };
@@ -80,6 +82,8 @@
 		05D048AE27CBBD0B00FC22F5 /* ActionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionCollectionViewCell.xib; sourceTree = "<group>"; };
 		05D048B227CBD27900FC22F5 /* AnnotationDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationDetailVC.swift; sourceTree = "<group>"; };
 		05D048B327CBD27900FC22F5 /* AnnotationDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnotationDetailVC.xib; sourceTree = "<group>"; };
+		05D048B827CC966700FC22F5 /* PhotoDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailVC.swift; sourceTree = "<group>"; };
+		05D048BC27CCA2AA00FC22F5 /* PhotoDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoDetailVC.xib; sourceTree = "<group>"; };
 		16D32C68D5B5BE0B0BD66261 /* Pods_quiz2022.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quiz2022.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F2AA8F242420D5B42E93A2C /* Pods-quiz2022-quiz2022UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quiz2022-quiz2022UITests.release.xcconfig"; path = "Target Support Files/Pods-quiz2022-quiz2022UITests/Pods-quiz2022-quiz2022UITests.release.xcconfig"; sourceTree = "<group>"; };
 		33134521BEB28ACF76D8C14E /* Pods_quiz2022_quiz2022UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quiz2022_quiz2022UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,11 +223,29 @@
 		05D048B127CBD25D00FC22F5 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				05D048B727CC964A00FC22F5 /* PhotoDetailVC */,
+				05D048B627CC964000FC22F5 /* AnnotationDetailVC */,
 				05D0486927CA14E700FC22F5 /* ViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		05D048B627CC964000FC22F5 /* AnnotationDetailVC */ = {
+			isa = PBXGroup;
+			children = (
 				05D048B227CBD27900FC22F5 /* AnnotationDetailVC.swift */,
 				05D048B327CBD27900FC22F5 /* AnnotationDetailVC.xib */,
 			);
-			path = VC;
+			path = AnnotationDetailVC;
+			sourceTree = "<group>";
+		};
+		05D048B727CC964A00FC22F5 /* PhotoDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				05D048B827CC966700FC22F5 /* PhotoDetailVC.swift */,
+				05D048BC27CCA2AA00FC22F5 /* PhotoDetailVC.xib */,
+			);
+			path = PhotoDetailVC;
 			sourceTree = "<group>";
 		};
 		D3FFAE96F56590FF1B48D305 /* Frameworks */ = {
@@ -358,6 +380,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05D048BD27CCA2AA00FC22F5 /* PhotoDetailVC.xib in Resources */,
 				05D048AB27CBB71B00FC22F5 /* ActionDialogVC.xib in Resources */,
 				05D048B027CBBD0B00FC22F5 /* ActionCollectionViewCell.xib in Resources */,
 				05D0487227CA14E800FC22F5 /* LaunchScreen.storyboard in Resources */,
@@ -498,6 +521,7 @@
 				05D0489E27CBA37D00FC22F5 /* LandscapeRes.swift in Sources */,
 				05D0489927CBA1F300FC22F5 /* NotificationVC.swift in Sources */,
 				05D0486627CA14E700FC22F5 /* AppDelegate.swift in Sources */,
+				05D048BA27CC966700FC22F5 /* PhotoDetailVC.swift in Sources */,
 				05D048A627CBB6C100FC22F5 /* SearchResultDialogVC.swift in Sources */,
 				05D048AA27CBB71B00FC22F5 /* ActionDialogVC.swift in Sources */,
 				05D0489727CA232C00FC22F5 /* UIViewController+.swift in Sources */,

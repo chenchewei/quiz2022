@@ -18,6 +18,7 @@ class AnnotationDetailVC: UIViewController {
     @IBOutlet weak var constraint_starWidth: NSLayoutConstraint!
     @IBOutlet weak var label_photos: UILabel!
     @IBOutlet weak var collectionView_scene: UICollectionView!
+    @IBOutlet weak var constraint_sceneHeight: NSLayoutConstraint!
     @IBOutlet weak var flowLayout_scene: UICollectionViewFlowLayout!
     
     private var data: LandscapeRes.Contents? = nil
@@ -57,8 +58,10 @@ class AnnotationDetailVC: UIViewController {
         flowLayout_star.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         constraint_starWidth.constant = CGFloat(45 * data.star) + CGFloat(5 * (data.star - 1))
         collectionView_stars.reloadData()
-        
-        flowLayout_scene.itemSize = CGSize(width: (UIScreen.main.bounds.width - 40 - 5 * 4) / 5, height: 90)
+        let row = ceil(Float(data.landscape.count) / 3.0)
+        constraint_sceneHeight.constant = CGFloat(row * 90)
+        let divider: CGFloat = row > 1 ? 2 : 3
+        flowLayout_scene.itemSize = CGSize(width: (UIScreen.main.bounds.width - 40 - 5 * 2) / divider, height: 90)
         flowLayout_scene.minimumLineSpacing = 5
         flowLayout_scene.minimumInteritemSpacing = 0
         flowLayout_scene.scrollDirection = .horizontal
@@ -76,7 +79,7 @@ extension AnnotationDetailVC: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let isScene: Bool = collectionView.tag == 1
-        let sceneWidth: CGFloat = (UIScreen.main.bounds.width - 40 - 5 * 4) / 5
+        let sceneWidth: CGFloat = (UIScreen.main.bounds.width - 40 - 5 * 2) / 3
         let imageView: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: isScene ? sceneWidth : 45, height: isScene ? 90 : 45))
         imageView.contentMode = .scaleAspectFit
         imageView.tintColor = isScene ? .brown : #colorLiteral(red: 0.9254261364, green: 0.7799510232, blue: 0.1985844731, alpha: 1)
@@ -94,8 +97,10 @@ extension AnnotationDetailVC: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard collectionView.tag == 1 else { return }
-        // TODO: navigate to photo detail vc
+        guard collectionView.tag == 1, let data = data else { return }
+        let index: Int = indexPath.row
+        let VC = PhotoDetailVC(photos: data.landscape, index: index)
+        navigationController?.pushViewController(VC, animated: true)
     }
     
 }

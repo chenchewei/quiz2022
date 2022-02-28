@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="collectionView_scene" destination="HSv-s1-0hj" id="mvs-pe-Yim"/>
                 <outlet property="collectionView_stars" destination="r64-5O-HfW" id="F8H-J5-DvG"/>
+                <outlet property="constraint_sceneHeight" destination="Bg0-ty-Ayk" id="aQk-xZ-Qgh"/>
                 <outlet property="constraint_starWidth" destination="dbx-70-2B9" id="6Oh-yt-ahy"/>
                 <outlet property="flowLayout_scene" destination="fpA-2s-ORR" id="XI1-vD-HfV"/>
                 <outlet property="flowLayout_star" destination="AZz-Ta-BlH" id="2NX-xE-w4P"/>
@@ -77,7 +78,7 @@
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="HSv-s1-0hj">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="HSv-s1-0hj">
                     <rect key="frame" x="20" y="449.5" width="374" height="90"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
