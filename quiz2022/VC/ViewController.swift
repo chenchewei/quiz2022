@@ -48,7 +48,10 @@ class ViewController: NotificationVC {
 
     private func componentsInit() {
         title = "景點搜尋"
+        let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
+        textFieldInsideSearchBar?.textColor = .black
         searchBar.placeholder = "名稱、地址搜尋"
+        searchBar.delegate = self
         button_search.layer.cornerRadius = 5
         button_history.layer.cornerRadius = 5
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "mapView")
@@ -80,10 +83,41 @@ class ViewController: NotificationVC {
             }
         }
     }
+    
+    private func searchForResult() {
+        guard let text = searchBar.text?.lowercased(), let data = data else { return }
+        let results: [LandscapeRes.Contents] = data.content.filter({ $0.name.contains(text) || $0.vicinity.contains(text) })
+        guard !results.isEmpty else {
+            view.endEditing(true)
+            view.makeToast("查無結果")
+            return
+        }
+        showSearchResultDialogVC(results: results)
+    }
+    
+    private func getDefaultData() -> [LandscapeRes.Contents]? {
+        guard let data = UserDefaults().object(forKey: "searchHistory") as? Data else { return nil }
+        let array = try? JSONDecoder().decode([LandscapeRes.Contents].self, from: data)
+        return array
+    }
     /// 調整地圖視角至使用者位置
     @objc private func refreshUserLocation() {
         mapView.setCenter(mapView.userLocation.coordinate, animated: true)
     }
+    
+    @IBAction func searchButtonTouchUpInside(_ sender: Any) {
+        searchForResult()
+    }
+    
+    @IBAction func historyButtonTouchUpInside(_ sender: Any) {
+        guard getDefaultData() != nil else {
+            view.endEditing(true)
+            view.makeToast("無歷史紀錄")
+            return
+        }
+        showSearchResultDialogVC(mode: .history)
+    }
+    
 }
 
 extension ViewController: CLLocationManagerDelegate {
@@ -152,6 +186,27 @@ extension ViewController: ActionDialogVCDelegate {
         }
         
     }
+}
+
+extension ViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchForResult()
+    }
+}
+
+extension ViewController: SearchResultDialogVCDelegate {
+    func historyDidClear() {
+        removePresented(animator: .fade) { [weak self] in
+            self?.view.makeToast("已清除紀錄")
+        }
+    }
     
-    
+    func setMapRegion(lat: CLLocationDegrees, lng: CLLocationDegrees) {
+        removePresented(animator: .fade) { [weak self] in
+            guard let self = self else { return }
+            let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+            let region = self.mapView.regionThatFits(MKCoordinateRegion(center: coordinate, latitudinalMeters: 200, longitudinalMeters: 200))
+            self.mapView.setRegion(region, animated: true)
+        }
+    }
 }

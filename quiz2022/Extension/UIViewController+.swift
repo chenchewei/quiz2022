@@ -28,6 +28,12 @@ extension UIViewController {
         VC.dialogShow(vc: self)
     }
     
+    func showSearchResultDialogVC(mode: SearchResultDialogVC.Mode = .result, results: [LandscapeRes.Contents]? = nil) {
+        let VC = SearchResultDialogVC(mode: mode, results: results)
+        VC.delegate = self as? SearchResultDialogVCDelegate
+        VC.dialogShow(vc: self)
+    }
+    
     func removePresented(animator: Animator = .enlarge, completion: (() -> Void)? = nil) {
         guard let presented = self.presentedViewController else { return }
         presented.dialogDismiss(animator: animator, completion: completion)

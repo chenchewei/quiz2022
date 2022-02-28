@@ -53,3 +53,21 @@ extension APIManager {
         self.httpGet(resClass: LandscapeRes.self)
     }
 }
+
+// 編碼拓展 encode
+extension Encodable {
+    func toData(using encoder: JSONEncoder = JSONEncoder()) throws -> Data {
+        return try encoder.encode(self)
+    }
+    func toString(using encoder: JSONEncoder = JSONEncoder()) throws -> String {
+        return try String(data: encoder.encode(self), encoding: .utf8) ?? ""
+    }
+}
+
+// 解碼拓展 decode
+extension Data {
+    func toObject<T>(resClass:T.Type)throws -> T? where T: Decodable {
+        let res = try JSONDecoder().decode(resClass, from: self)
+        return res
+    }
+}

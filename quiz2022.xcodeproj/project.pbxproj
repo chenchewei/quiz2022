@@ -20,8 +20,6 @@
 		05D0489927CBA1F300FC22F5 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D0489827CBA1F300FC22F5 /* NotificationVC.swift */; };
 		05D0489C27CBA2D200FC22F5 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D0489B27CBA2D200FC22F5 /* APIManager.swift */; };
 		05D0489E27CBA37D00FC22F5 /* LandscapeRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D0489D27CBA37D00FC22F5 /* LandscapeRes.swift */; };
-		05D048A227CBB69200FC22F5 /* SearchHistoryDialogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D048A027CBB69200FC22F5 /* SearchHistoryDialogVC.swift */; };
-		05D048A327CBB69200FC22F5 /* SearchHistoryDialogVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D048A127CBB69200FC22F5 /* SearchHistoryDialogVC.xib */; };
 		05D048A627CBB6C100FC22F5 /* SearchResultDialogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D048A427CBB6C100FC22F5 /* SearchResultDialogVC.swift */; };
 		05D048A727CBB6C100FC22F5 /* SearchResultDialogVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D048A527CBB6C100FC22F5 /* SearchResultDialogVC.xib */; };
 		05D048AA27CBB71B00FC22F5 /* ActionDialogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D048A827CBB71B00FC22F5 /* ActionDialogVC.swift */; };
@@ -72,8 +70,6 @@
 		05D0489827CBA1F300FC22F5 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
 		05D0489B27CBA2D200FC22F5 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		05D0489D27CBA37D00FC22F5 /* LandscapeRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeRes.swift; sourceTree = "<group>"; };
-		05D048A027CBB69200FC22F5 /* SearchHistoryDialogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryDialogVC.swift; sourceTree = "<group>"; };
-		05D048A127CBB69200FC22F5 /* SearchHistoryDialogVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHistoryDialogVC.xib; sourceTree = "<group>"; };
 		05D048A427CBB6C100FC22F5 /* SearchResultDialogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultDialogVC.swift; sourceTree = "<group>"; };
 		05D048A527CBB6C100FC22F5 /* SearchResultDialogVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultDialogVC.xib; sourceTree = "<group>"; };
 		05D048A827CBB71B00FC22F5 /* ActionDialogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDialogVC.swift; sourceTree = "<group>"; };
@@ -201,8 +197,6 @@
 		05D0489F27CBB66B00FC22F5 /* DialogVC */ = {
 			isa = PBXGroup;
 			children = (
-				05D048A027CBB69200FC22F5 /* SearchHistoryDialogVC.swift */,
-				05D048A127CBB69200FC22F5 /* SearchHistoryDialogVC.xib */,
 				05D048A427CBB6C100FC22F5 /* SearchResultDialogVC.swift */,
 				05D048A527CBB6C100FC22F5 /* SearchResultDialogVC.xib */,
 				05D048A827CBB71B00FC22F5 /* ActionDialogVC.swift */,
@@ -386,7 +380,6 @@
 				05D0487227CA14E800FC22F5 /* LaunchScreen.storyboard in Resources */,
 				05D0486F27CA14E800FC22F5 /* Assets.xcassets in Resources */,
 				05D0486D27CA14E700FC22F5 /* Main.storyboard in Resources */,
-				05D048A327CBB69200FC22F5 /* SearchHistoryDialogVC.xib in Resources */,
 				05D048B527CBD27900FC22F5 /* AnnotationDetailVC.xib in Resources */,
 				05D048A727CBB6C100FC22F5 /* SearchResultDialogVC.xib in Resources */,
 			);
@@ -526,7 +519,6 @@
 				05D048AA27CBB71B00FC22F5 /* ActionDialogVC.swift in Sources */,
 				05D0489727CA232C00FC22F5 /* UIViewController+.swift in Sources */,
 				05D0486827CA14E700FC22F5 /* SceneDelegate.swift in Sources */,
-				05D048A227CBB69200FC22F5 /* SearchHistoryDialogVC.swift in Sources */,
 				05D048B427CBD27900FC22F5 /* AnnotationDetailVC.swift in Sources */,
 				05D048AF27CBBD0B00FC22F5 /* ActionCollectionViewCell.swift in Sources */,
 			);
