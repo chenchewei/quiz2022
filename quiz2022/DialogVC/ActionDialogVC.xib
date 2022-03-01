@@ -50,7 +50,7 @@
                             </connections>
                         </collectionView>
                     </subviews>
-                    <color key="backgroundColor" red="0.33257532908268206" green="0.81041570255724671" blue="0.67732725301659125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.33333333333333331" green="0.81176470588235294" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="VDd-fW-1d3" firstAttribute="centerX" secondItem="xts-75-q0Y" secondAttribute="centerX" id="15n-TL-RaN"/>
                         <constraint firstItem="Pzp-Uc-ssu" firstAttribute="centerX" secondItem="xts-75-q0Y" secondAttribute="centerX" id="9JT-1Z-6kJ"/>

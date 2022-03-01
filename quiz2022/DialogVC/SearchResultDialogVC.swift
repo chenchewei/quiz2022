@@ -47,7 +47,7 @@ class SearchResultDialogVC: UIViewController {
         }
         view_dialog.layer.cornerRadius = 10
         button_clear.layer.cornerRadius = 5
-        label_title.text = mode == .result ? "搜尋紀錄" : "搜尋結果"
+        label_title.text = mode == .result ? "搜尋結果" : "搜尋紀錄"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(dismissDialog))
         swipeDown.direction = .down

@@ -82,7 +82,7 @@ extension AnnotationDetailVC: UICollectionViewDataSource, UICollectionViewDelega
         let sceneWidth: CGFloat = (UIScreen.main.bounds.width - 40 - 5 * 2) / 3
         let imageView: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: isScene ? sceneWidth : 45, height: isScene ? 90 : 45))
         imageView.contentMode = .scaleAspectFit
-        imageView.tintColor = isScene ? .brown : #colorLiteral(red: 0.9254261364, green: 0.7799510232, blue: 0.1985844731, alpha: 1)
+        imageView.tintColor = isScene ? .brown : #colorLiteral(red: 0.9254901961, green: 0.7803921569, blue: 0.2, alpha: 1)
         guard let data = data else { return UICollectionViewCell() }
         if isScene {
             imageView.sd_setImage(with: URL(string: data.landscape[indexPath.row]), placeholderImage: UIImage(systemName: "arrow.2.circlepath.circle.fill"))

@@ -197,6 +197,7 @@ extension ViewController: UISearchBarDelegate {
 extension ViewController: SearchResultDialogVCDelegate {
     func historyDidClear() {
         removePresented(animator: .fade) { [weak self] in
+            self?.view.endEditing(true)
             self?.view.makeToast("已清除紀錄")
         }
     }
